@@ -7,7 +7,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.vedavisor.com/mcp",
+      "url": "https://mcp.vedavisor.com/mcp/",
       "headers": [
         {
           "name": "Authorization",

@@ -11,18 +11,42 @@ Professional-grade Vedic astrology via Model Context Protocol. 22 tools: birth c
 | Status | created |
 | Type | server |
 | Tags | vedic-astrology, astrology, mcp-server, birth-chart, panchanga, dasha, muhurta, prashna, cosmology |
-| Avatar URL | https://mcp.vedavisor.com/ |
+| Avatar URL | https://raw.githubusercontent.com/dchhill/vedavisor-vedic-astrology-mcp/main/logo.png |
 | Author Name | VedaVisor |
 | GitHub URL | [https://mcp.vedavisor.com](https://github.com/dchhill/vedavisor-vedic-astrology-mcp) |
 
 ## Server Config
 
+Remote MCP clients:
+
 ```json
 {
   "mcpServers": {
     "vedavisor": {
-      "url": "https://mcp.vedavisor.com/mcp",
+      "url": "https://mcp.vedavisor.com/mcp/",
       "headers": { "Authorization": "Bearer vv_live_YOUR_KEY" }
+    }
+  }
+}
+```
+
+Cline / stdio MCP clients:
+
+```json
+{
+  "mcpServers": {
+    "vedavisor": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.vedavisor.com/mcp/",
+        "--header",
+        "Authorization: Bearer ${VEDAVISOR_MCP_API_KEY}"
+      ],
+      "env": {
+        "VEDAVISOR_MCP_API_KEY": "vv_live_YOUR_KEY"
+      }
     }
   }
 }
@@ -53,7 +77,7 @@ The only MCP server that reads your chart like a real astrologer, not a template
 ## Links
 
 - Website: https://mcp.vedavisor.com
-- MCP endpoint: https://mcp.vedavisor.com/mcp
+- MCP endpoint: https://mcp.vedavisor.com/mcp/
 - Signup: https://vedavisor.com/auth?mode=signup&redirect=%2Fmcp-api-keys
 
 ## Security Note

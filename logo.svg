@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="VedaVisor logo">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6C85F"/>
+      <stop offset="45%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#A86D12"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="48" fill="#050505"/>
+  <path fill="url(#gold)" stroke="#FFE49A" stroke-width="3" stroke-linejoin="round" filter="url(#glow)" d="
+    M200 34
+    L224 86 L208 86 L208 216
+    L200 250
+    L192 216 L192 86 L176 86 Z
+
+    M200 226
+    L110 98
+    Q88 66 52 82
+    Q88 82 132 140 Z
+
+    M200 226
+    L290 98
+    Q312 66 348 82
+    Q312 82 268 140 Z
+  "/>
+  <text x="200" y="324" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="56" font-weight="700"
+        fill="url(#gold)" stroke="#FFE49A" stroke-width="1.2">
+    VedaVisor
+  </text>
+  <path d="M72 348H328" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+</svg>
