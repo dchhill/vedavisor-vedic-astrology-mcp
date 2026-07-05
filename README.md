@@ -11,9 +11,9 @@ Professional-grade Vedic astrology via Model Context Protocol. 22 tools: birth c
 | Status | created |
 | Type | server |
 | Tags | vedic-astrology, astrology, mcp-server, birth-chart, panchanga, dasha, muhurta, prashna, cosmology |
-| Avatar URL | https://mcp.vedavisor.com/favicon.ico |
+| Avatar URL | https://mcp.vedavisor.com/ |
 | Author Name | VedaVisor |
-| GitHub URL | https://mcp.vedavisor.com |
+| GitHub URL | [https://mcp.vedavisor.com](https://github.com/dchhill/vedavisor-vedic-astrology-mcp) |
 
 ## Server Config
 
