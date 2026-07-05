@@ -1,0 +1,25 @@
+name: Publish MCP Registry Metadata
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Download MCP Publisher
+        run: |
+          curl -L "https://github.com/modelcontextprotocol/registry/releases/download/v1.7.9/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+
+      - name: Validate metadata
+        run: ./mcp-publisher validate
+
+      - name: Publish metadata
+        run: |
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish
