@@ -58,4 +58,4 @@ The only MCP server that reads your chart like a real astrologer, not a template
 
 ## Security Note
 
-This repository contains public listing information and an example MCP client configuration only. It does not contain VedaVisor source code, prompts, infrastructure, secrets, API keys, or private implementation details.
+This repository contains public listing information and an example MCP client configuration only.
