@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.dchhill/vedavisor-vedic-astrology-mcp",
+  "title": "VedaVisor Vedic Astrology MCP",
+  "description": "Professional-grade Vedic astrology via Model Context Protocol. 22 tools for birth charts, dashas, yogas, compatibility, panchanga, muhurta, prashna, and chart-aware Cosmic Advisor interpretation.",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.vedavisor.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token using a VedaVisor MCP API key, for example: Bearer vv_live_YOUR_KEY",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
