@@ -21,17 +21,14 @@ Add this server configuration in Cline's MCP Servers settings:
         "mcp-remote",
         "https://mcp.vedavisor.com/mcp/",
         "--header",
-        "Authorization: Bearer ${VEDAVISOR_MCP_API_KEY}"
-      ],
-      "env": {
-        "VEDAVISOR_MCP_API_KEY": "vv_live_YOUR_KEY"
-      }
+        "Authorization: Bearer vv_live_YOUR_KEY"
+      ]
     }
   }
 }
 ```
 
-Replace `vv_live_YOUR_KEY` with your own VedaVisor MCP API key. Do not commit real API keys.
+Replace `vv_live_YOUR_KEY` with your actual VedaVisor MCP API key. Do not commit real API keys.
 
 ## Verification
 
@@ -41,4 +38,4 @@ After saving the configuration, open Cline's MCP Servers view and confirm that `
 https://mcp.vedavisor.com/mcp/
 ```
 
-The server uses Streamable HTTP and bearer-token authentication.
+The server uses Streamable HTTP and bearer-token authentication supporting both API keys (`vv_live_` / `vv_test_` prefix) and Supabase OAuth JWTs.
